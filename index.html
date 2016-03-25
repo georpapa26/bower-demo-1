@@ -1,0 +1,18 @@
+<html ng-app="myApplication">
+
+<head>
+  <title>Angular Demo 1</title>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-controller="myController as controller">
+  <h1>Angular Demo 1</h1>
+  <p>Καλησπέρα, το όνομα μου είναι <strong>{{controller.person.name}}</strong> και είμαι <strong>{{controller.person.weight}}</strong> κιλά.</p>
+
+  <button ng-click="controller.eatSnack()" ng-hide="controller.person.weight > 105">Ας φάω ένα σνακ ...</button>
+  <button ng-click="controller.walk()" ng-show="controller.person.weight > 80">Κάνε μια βόλτα ...</button>
+</body>
+
+</html>
